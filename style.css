@@ -5,25 +5,37 @@
   box-sizing: border-box;
 }
 
-/* Body styles */
+/* Layout for sticky footer */
+html, body {
+  height: 100%;
+}
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background-color: #f0f0f0;
-  color: #7e7e7e;
+  color: #333333; /* improved contrast for body text */
   padding: 20px;
+}
+
+/* Main content grows to push footer to bottom */
+main {
+  flex: 1;
 }
 
 /* Header */
 header {
   background-color: #964B00; /* brown background */
-  color: #ffffff;            /* use white for readable contrast */
+  color: #ffffff;
   padding: 20px 0;
   text-align: center;
 }
 
-/* Make sure any headings or text inside header are white */
-header, header * {
+/* Target specific header children rather than all descendants */
+header h1,
+header nav {
   color: #ffffff;
 }
 
@@ -35,17 +47,24 @@ header nav a {
   font-weight: bold;
 }
 
-/* Hover state */
-header nav a:hover {
+/* Hover & focus state for accessibility */
+header nav a:hover,
+header nav a:focus {
   text-decoration: underline;
   opacity: 0.95;
+  outline: none;
+}
+header nav a:focus {
+  outline: 3px solid rgba(255,255,255,0.25);
+  outline-offset: 2px;
 }
 
 /* Sections */
 section {
   background-color: #450000;
   color: #ffffff; /* ensure section text is readable on dark bg */
-  margin: 10px;
+  max-width: 1000px;
+  margin: 10px auto;
   padding: 15px;
   border-radius: 15px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -54,11 +73,9 @@ section {
 /* Footer */
 footer {
   text-align: center;
-  margin-top: 540px; /* lowered from 640px */
+  margin-top: 20px; /* small spacing only; layout keeps footer at bottom */
   font-size: 0.9em;
   color: #666;
 }
-
-
 
 
