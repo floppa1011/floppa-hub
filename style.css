@@ -16,27 +16,36 @@ body {
 
 /* Header */
 header {
-  background-color: #964B00;
-  color: brown;
+  background-color: #964B00; /* brown background */
+  color: #ffffff;            /* use white for readable contrast */
   padding: 20px 0;
   text-align: center;
 }
 
+/* Make sure any headings or text inside header are white */
+header, header * {
+  color: #ffffff;
+}
+
+/* Navigation links inside header */
 header nav a {
-  color: white;
+  color: #ffffff;
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
 }
 
+/* Hover state */
 header nav a:hover {
-  text-decoration: unset;
+  text-decoration: none;
+  opacity: 0.95;
 }
 
 /* Sections */
 section {
   background-color: #1b006d;
-  margin: 10px ;
+  color: #ffffff; /* ensure section text is readable on dark bg */
+  margin: 10px;
   padding: 15px;
   border-radius: 15px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -45,10 +54,9 @@ section {
 /* Footer */
 footer {
   text-align: center;
-  margin-top: 640px;
+  margin-top: 40px; /* lowered from 640px */
   font-size: 0.9em;
   color: #666;
 }
-
 
 
