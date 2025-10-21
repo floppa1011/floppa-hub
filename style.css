@@ -37,13 +37,13 @@ header nav a {
 
 /* Hover state */
 header nav a:hover {
-  text-decoration: none;
+  text-decoration: underliner;
   opacity: 0.95;
 }
 
 /* Sections */
 section {
-  background-color: #1b006d;
+  background-color: #450000;
   color: #ffffff; /* ensure section text is readable on dark bg */
   margin: 10px;
   padding: 15px;
@@ -54,9 +54,10 @@ section {
 /* Footer */
 footer {
   text-align: center;
-  margin-top: 40px; /* lowered from 640px */
+  margin-top: 540px; /* lowered from 640px */
   font-size: 0.9em;
   color: #666;
 }
+
 
 
